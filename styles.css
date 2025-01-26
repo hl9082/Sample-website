@@ -3,15 +3,17 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
+    padding: 20px 50px;
+    background-color: #1a1a1a;
     color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -22,48 +24,52 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav button {
-    padding: 15px 30px;
-    font-size: 18px;
-    background-color: #555;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav button:hover {
-    background-color: #777;
+    background-color: #555;
     transform: scale(1.05);
 }
 
 .hero {
     display: flex;
     align-items: center;
-    padding: 50px;
+    justify-content: space-between;
+    padding: 100px 50px;
     background-color: #e0e0e0;
 }
 
 .hero-text {
     flex: 1;
+    max-width: 600px;
 }
 
 .hero-text h1 {
-    font-size: 48px;
-    margin: 0;
+    font-size: 56px;
+    margin: 0 0 20px;
+    color: #1a1a1a;
 }
 
 .hero-text p {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: scale(0.9);
     opacity: 0;
@@ -71,88 +77,5 @@ nav button:hover {
 
 .hero-image img.visible {
     transform: scale(1);
-    opacity: 1;
-}
-
-.about {
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    background-color: #fff;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 400px;
-}
-
-.about-text {
-    flex: 1;
-    padding-left: 20px;
-}
-
-.about-text h2 {
-    font-size: 36px;
-    margin: 0;
-}
-
-.about-text p {
-    font-size: 18px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-.investors {
-    padding: 50px;
-    background-color: #e0e0e0;
-    text-align: center;
-}
-
-.investors h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.investors p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.investors button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.investors button:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-.image-container img {
-    width: 100%;
-    max-width: 400px;
-    transition: opacity 1s ease;
-    opacity: 0;
-}
-
-.image-container img.visible {
     opacity: 1;
 }
