@@ -1,5 +1,5 @@
-ody {
-    font-family: Arial, sans-serif;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -10,11 +10,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #333;
+    color: #fff;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -24,9 +25,20 @@ nav ul {
     gap: 20px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #333;
+nav button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #777;
+    transform: scale(1.05);
 }
 
 .hero {
@@ -94,6 +106,13 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
 
 .investors {
@@ -118,6 +137,13 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.investors button:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
 
 .image-container img {
