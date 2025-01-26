@@ -31,7 +31,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
  * - Listens for click events on the "Explore" button.
  * - Displays an alert box with a custom message.
  */
-document.querySelector('button').addEventListener('click', function() {
+document.querySelector('.about button').addEventListener('click', function() {
     alert('Explore our cybersecurity solutions!');
 });
 
@@ -55,4 +55,13 @@ window.addEventListener('scroll', function() {
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+});
+
+/**
+ * Alert on "Contact for Partnership" button click
+ * 
+ * This section displays an alert message when the "Contact for Partnership" button is clicked.
+ */
+document.querySelector('.investors button').addEventListener('click', function() {
+    alert('Thank you for your interest in partnering with us! Please contact us for more details.');
 });
