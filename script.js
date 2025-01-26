@@ -1,67 +1,48 @@
 // script.js
 
 /**
- * Smooth scroll for navigation links
+ * Continuous appear/disappear effect for images
  * 
- * This section enables smooth scrolling to sections of the page when navigation links are clicked.
- * 
- * - Listens for click events on all navigation links.
- * - Prevents the default anchor link behavior.
- * - Scrolls smoothly to the target section using the window.scrollTo method.
+ * This section makes images appear and disappear continuously.
  */
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
+document.querySelectorAll('.image-container img').forEach(image => {
+    setInterval(() => {
+        image.classList.toggle('visible');
+    }, 2000); // Change every 2 seconds
 });
 
 /**
  * Alert on "Explore" button click
  * 
  * This section displays an alert message when the "Explore" button is clicked.
- * 
- * - Listens for click events on the "Explore" button.
- * - Displays an alert box with a custom message.
  */
-document.querySelector('.about button').addEventListener('click', function() {
-    alert('Explore our cybersecurity solutions!');
-});
-
-/**
- * Pop-out effect for hero image on scroll
- * 
- * This section makes the hero image pop out when scrolling down and disappear when scrolling up.
- */
-let lastScrollTop = 0;
-const heroImage = document.querySelector('.hero-image img');
-
-window.addEventListener('scroll', function() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        heroImage.classList.add('visible');
-    } else {
-        // Scrolling up
-        heroImage.classList.remove('visible');
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-});
+const exploreButton = document.querySelector('.about button');
+if (exploreButton) {
+    exploreButton.addEventListener('click', function() {
+        alert('Explore our cybersecurity solutions!');
+    });
+}
 
 /**
  * Alert on "Contact for Partnership" button click
  * 
  * This section displays an alert message when the "Contact for Partnership" button is clicked.
  */
-document.querySelector('.investors button').addEventListener('click', function() {
-    alert('Thank you for your interest in partnering with us! Please contact us for more details.');
-});
+const partnershipButton = document.querySelector('.investors button');
+if (partnershipButton) {
+    partnershipButton.addEventListener('click', function() {
+        alert('Thank you for your interest in partnering with us! Please contact us for more details.');
+    });
+}
+
+/**
+ * Alert on "Investor" button click
+ * 
+ * This section displays an alert message when the "Investor" button is clicked.
+ */
+const investorButton = document.querySelector('.investor button');
+if (investorButton) {
+    investorButton.addEventListener('click', function() {
+        alert('Thank you for your interest in investing with us! Please contact us for more details.');
+    });
+}
