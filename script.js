@@ -34,3 +34,25 @@ document.querySelectorAll('nav a').forEach(anchor => {
 document.querySelector('button').addEventListener('click', function() {
     alert('Explore our cybersecurity solutions!');
 });
+
+/**
+ * Pop-out effect for hero image on scroll
+ * 
+ * This section makes the hero image pop out when scrolling down and disappear when scrolling up.
+ */
+let lastScrollTop = 0;
+const heroImage = document.querySelector('.hero-image img');
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        heroImage.classList.add('visible');
+    } else {
+        // Scrolling up
+        heroImage.classList.remove('visible');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+});

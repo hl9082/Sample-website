@@ -52,6 +52,14 @@ nav a {
 .hero-image img {
     width: 100%;
     max-width: 400px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.hero-image img.visible {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .about {
