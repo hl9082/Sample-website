@@ -99,13 +99,13 @@ nav button:hover {
 }
 
 .tagline h2 {
-    font-size: 24px;
+    font-size: 35px;
     margin: 0;
     color: #1a1a1a;
 }
 
 .tagline p {
-    font-size: 14px;
+    font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
