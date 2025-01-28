@@ -39,7 +39,7 @@ nav ul {
 
 nav button {
     padding: 12px 25px;
-    font-size: 20px;
+    font-size: 16px;
     background-color: #333;
     color: #fff;
     border: none;
@@ -73,7 +73,7 @@ nav button:hover {
 }
 
 .hero-text p {
-    font-size: 40px;
+    font-size: 20px;
     line-height: 1.6;
     color: #666;
 }
@@ -85,31 +85,42 @@ nav button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.about {
+.services {
     padding: 50px;
-    background-color: #fff;
+    background-color: #f4f4f4;
+    text-align: center;
+    display: none; /* Initially hidden */
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-item {
+    max-width: 300px;
     text-align: center;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-content h2 {
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-.about-content p {
-    font-size: 40px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.about-content img {
+.service-item img {
     width: 100%;
-    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.4;
 }

@@ -46,3 +46,8 @@ if (investorButton) {
         alert('Thank you for your interest in investing with us! Please contact us for more details.');
     });
 }
+document.getElementById('explore-services').addEventListener('click', function() {
+    const servicesSection = document.getElementById('services');
+    servicesSection.style.display = 'block';
+    servicesSection.scrollIntoView({ behavior: 'smooth' });
+});
